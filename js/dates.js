@@ -37,6 +37,12 @@ function formatTime(date) {
   if (date.getMinutes() < 10){
     return `${date.getHours()}:0${date.getMinutes()}`;
   }
+  if (date.getHours() >= 10){
+    return `${date.getHours()}:${date.getMinutes()}`;
+  }
+  if (date.getHours() < 10){
+    return `0${date.getHours()}:0${date.getMinutes()}`;
+  }
 }
 
 /*
